@@ -5,7 +5,16 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
+    public Manager manager;
 
+    private void Start()
+    {
+        manager = GameObject.FindObjectOfType<Manager>();
+        if (manager == null)
+        {
+            Debug.LogError("Blad");
+        }
+    }
     public void Damage(int amountOfDamage)
     {
         health = health - amountOfDamage;
@@ -14,6 +23,7 @@ public class Enemy : MonoBehaviour
         {
             health = 0;
             Debug.LogWarning($"Current {health}");
+            manager.AddEnemyToCounter();
             Destroy(gameObject);
         }
        

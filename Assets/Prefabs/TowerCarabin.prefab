@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3754578075154528559
 Transform:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 3754578073788775324}
   - component: {fileID: 3754578073788775322}
   - component: {fileID: 3754578073788775323}
-  - component: {fileID: 3754578073788775321}
+  - component: {fileID: 240294555}
   m_Layer: 0
   m_Name: TowerCarabin
   m_TagString: Untagged
@@ -74,7 +74,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4097036564816414415}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.01, y: -0.05, z: -4.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -159,8 +159,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.0855
-  m_Center: {x: -0.13232374, y: 0.31605005, z: 2}
+  m_Radius: 5.2281666
+  m_Center: {x: -0.13232374, y: 0.31605005, z: 0.8573332}
 --- !u!114 &3754578073788775323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
---- !u!114 &3754578073788775321
+--- !u!114 &240294555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

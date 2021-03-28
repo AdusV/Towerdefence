@@ -7,11 +7,16 @@ public class TowerBase : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
 {
     public GameObject towerGhost;
     public GameObject towerPrefab;
+    Manager manager;
     public void OnPointerClick(PointerEventData eventData)
     {
         Instantiate(towerPrefab, transform.position, transform.rotation);
         towerGhost.SetActive(false);
-        GetComponent<MeshCollider>().enabled = false; 
+        GetComponent<MeshCollider>().enabled = false;
+        Time.timeScale = 1;
+        manager.panelPlaceTurret.SetActive(false);
+        manager.turrentManager.UnregisterTurret(this);
+        manager.turrentManager.DeactivateAllBases();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -22,5 +27,11 @@ public class TowerBase : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         towerGhost.SetActive(false);
+    }
+    private void Start()
+    {
+        manager = GameObject.FindObjectOfType<Manager>();
+        Debug.LogError("Bladd");
+        manager.turrentManager.RegisterTurret(this);
     }
 }
