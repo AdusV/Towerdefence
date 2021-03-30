@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
     public GameObject panelWin;
     public GameObject panelPlaceTurret;
     public TurrentManager turrentManager;
+    public Transform ourBase;
 
     int currentWave = 0;
     public int[] waves;

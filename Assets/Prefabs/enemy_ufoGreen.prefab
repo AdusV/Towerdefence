@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3674447416975998742}
   - component: {fileID: 5308045178695284695}
   - component: {fileID: 1987668580106193316}
+  - component: {fileID: 6477718490386465683}
   m_Layer: 0
   m_Name: enemy_ufoGreen
   m_TagString: Enemy
@@ -58,6 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,6 +86,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3674447416975998742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +126,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5578a8bd92702e5498f9c3a9b493d93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  manager: {fileID: 0}
+--- !u!195 &6477718490386465683
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4485351739492301416}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.49999997
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.3057445
+  m_BaseOffset: 0.01
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

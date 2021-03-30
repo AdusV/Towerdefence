@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public int health = 100;
     public Manager manager;
 
-    private void Start()
+    private void Awake()
     {
         manager = GameObject.FindObjectOfType<Manager>();
         if (manager == null)

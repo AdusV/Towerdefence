@@ -31,7 +31,11 @@ public class TowerBase : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
     private void Start()
     {
         manager = GameObject.FindObjectOfType<Manager>();
-        Debug.LogError("Bladd");
+        if (manager == null)
+        {
+            Debug.LogError("Nie znaleziono managera");
+        }
+        
         manager.turrentManager.RegisterTurret(this);
     }
 }
